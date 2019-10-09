@@ -1,7 +1,7 @@
 import * as d3 from 'd3';
 import { moveElementsToNewParent } from './util';
 
-const d3Showcase = () => {
+const createHintOne = () => {
     const paths = d3.select('.vegaViz1 > svg').selectAll('path');
     const oneBar = d3.select(paths.nodes()[5]);
     const oneBarBox = oneBar.node().getBBox();
@@ -16,7 +16,6 @@ const d3Showcase = () => {
       .on('click', function(d) {
         d3.select(this).attr("visibility", "hidden");
       });
-
 
     hint1Group
       .append('circle')
@@ -62,4 +61,4 @@ const makeLegendBoxes = () => {
   moveElementsToNewParent(['step-3', 'step-4', 'step-5'], 'using');
 };
 
-export { d3Showcase, makeLegendBoxes };
+export { createHintOne, makeLegendBoxes };

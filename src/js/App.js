@@ -6,7 +6,7 @@ import Greeting from './components/Greeting';
 import ModeSwitcher from './components/ModeSwitcher';
 import FinishStudy from './components/FinishStudy';
 import Header from './components/Header';
-import { d3Showcase } from './shared/d3Manipulations';
+import manageHints from './shared/d3Interaction';
 import { LoadingIndicator } from './shared/util';
 import { CONCRETE, MAX_HINTS, VIZ_DESC } from './shared/constants';
 
@@ -37,7 +37,7 @@ class App extends Component {
   }
 
   componentDidUpdate() {
-    d3Showcase();
+    manageHints(this.state.mode); 
   }
 
   /**
