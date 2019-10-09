@@ -2,7 +2,8 @@ import {
   createHintOne,
   createHintTwo,
   createHintThree,
-  createHintFour
+  createHintFour,
+  createHintFive
 } from "./d3Manipulations";
 
 const manageHints = mode => {
@@ -18,6 +19,9 @@ const manageHints = mode => {
       break;
     case 3:
       createHintFour();
+      break;
+    case 4:
+      createHintFive();
       break;
     default:
       console.log("Nothing happens");

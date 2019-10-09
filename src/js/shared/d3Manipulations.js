@@ -236,7 +236,7 @@ const createHintFive = () => {
     .attr("stroke", "#C51B7D")
     .attr("stroke-width", 2);
 
-  return 4;
+  return 5;
 };
 
 /** FOR LEGEND BOXES NECESSARY */
