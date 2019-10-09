@@ -95,7 +95,7 @@ class App extends Component {
               </Row> */}
               <Row type="flex" justify="start">
                 <Col span={24}>
-                  <h2>{parse(VIZ_DESC)}</h2>
+                  <h6>{parse(VIZ_DESC)}</h6>
                 </Col>
               </Row>
             </div>

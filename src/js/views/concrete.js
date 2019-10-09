@@ -5,15 +5,15 @@ const sourceData3 = require('./data/tempMunich.json'); // Munich Chart data
 const TEXTS = {
   ONE: 'Each bar represents a data item.',
   TWO:
-    'The height of each bar shows the number of <span class="hT">average temperature</span> in Oslo <span class="hT">(y-axis)</span>.',
+    'The height of each bar shows the <span class="hT">average temperature in Oslo for a certain month</span> (y-axis).',
   THREE:
-    'The horizontal position of each bar represents the <span class="ht">year</span> (x-axis).',
+    'The horizontal position of each bar represents the <span class="hT">month</span> (x-axis).',
   FOUR:
-    'In <span class="hT">2010</span>, the average temperature <span class="hT">4.9°C</span> was captured in <span class="hT">Oslo</span>.',
+    'An average temperature of <span class="hT">-4 °C</span> was measured in <span class="hT">Oslo in February</span>.',
   FIVE:
-    'In <span class="hT">2015</span>, the average temperature in <span class="hT">Tallinn</span> was <span class="hT">7.55 °C</span>.',
+    'The average temperature in <span class="hT">August</span> is higher in <span class="hT">Tallinn</span> than in <span class="hT">Oslo</span>.',
   SIX:
-    'In <span class="hT">1996</span>, in all three cities <span class="hT">Oslo, Munich and Tallinn</span> the average temperature was lower than the year before and after.'
+    'In 2018, the average temperature in February was below 0°C in each of the three cities <span class="hT">Oslo, Munich, and Tallinn</span>.'
 };
 
 const TEXTGROUPS = {
@@ -65,14 +65,21 @@ export class ConcreteDataProvider {
       spec: {
         mark: { type: 'bar' },
         encoding: {
-          x: { field: 'year', type: 'ordinal', title: 'Year' },
+          x: {
+            field: 'date',
+            type: 'ordinal',
+            axis: {
+              title: 'Month',
+              labelAngle: 0
+            }
+          },
           y: {
             field: 'temp',
             type: 'quantitative',
             title: 'Average temperature in °C'
           }
         },
-        title: "Average Temperature progress in Oslo from 1990 to 2018",
+        title: 'Average temperature in Oslo, Norway in 2018'
       },
       data: {
         values: sourceData1
@@ -85,17 +92,21 @@ export class ConcreteDataProvider {
       spec: {
         mark: { type: 'bar' },
         encoding: {
-          x: { field: 'year', type: 'ordinal', title: 'Year' },
+          x: {
+            field: 'date',
+            type: 'ordinal',
+            axis: {
+              title: 'Month',
+              labelAngle: 0
+            }
+          },
           y: {
             field: 'temp',
             type: 'quantitative',
             title: 'Average temperature in °C'
-          },
-          color: {
-            value: "#ff9900"
           }
         },
-        title: "Average Temperature progress in Tallinn from 1990 to 2018",
+        title: 'Average temperature in Tallinn, Estonia in 2018'
       },
       data: {
         values: sourceData2
@@ -108,17 +119,21 @@ export class ConcreteDataProvider {
       spec: {
         mark: { type: 'bar' },
         encoding: {
-          x: { field: 'year', type: 'ordinal', title: 'Year' },
+          x: {
+            field: 'date',
+            type: 'ordinal',
+            axis: {
+              title: 'Month',
+              labelAngle: 0
+            }
+          },
           y: {
             field: 'temp',
             type: 'quantitative',
             title: 'Average temperature in °C'
-          },
-          color: {
-            value: "green"
           }
         },
-        title: "Average Temperature progress in Munich, Germany from 1990 to 2018",
+        title: 'Average temperature in Munich, Germany in 2018'
       },
       data: {
         values: sourceData3
@@ -206,7 +221,7 @@ export class ConcreteDataProvider {
         {
           h6: `<div class="vizHint">${TEXTS.SIX}</div>`,
           group: `${TEXTGROUPS.g2}`
-        },
+        }
       ]
     };
   }

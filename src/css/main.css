@@ -92,3 +92,7 @@ td {
         width: auto !important;
     }
 }
+
+.introText {
+    font-weight: bold;
+}
