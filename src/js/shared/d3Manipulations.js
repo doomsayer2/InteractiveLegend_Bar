@@ -132,7 +132,6 @@ const createHintThree = () => {
   return 3;
 };
 
-
 const createHintFour = () => {
   const paths = d3.select(".vegaViz1 > svg").selectAll("path");
   const oneBar = d3.select(paths.nodes()[3]);
@@ -170,8 +169,75 @@ const createHintFour = () => {
   return 4;
 };
 
+const createHintFive = () => {
+  const paths = d3.select(".vegaViz1 > svg").selectAll("path");
+  const oneBar = d3.select(paths.nodes()[9]);
+  const oneBarBox = oneBar.node().getBBox();
 
+  const paths2 = d3.select(".vegaViz2 > svg").selectAll("path");
+  const oneBar2 = d3.select(paths2.nodes()[9]);
+  const oneBarBox2 = oneBar2.node().getBBox();
 
+  const hint5Group = d3
+    .select(".vegaViz1 > svg")
+    .select(".mark-rect")
+    .append("g");
+
+  const hint5Group2 = d3
+    .select(".vegaViz2 > svg")
+    .select(".mark-rect")
+    .append("g");
+
+  hint5Group
+    .append("circle")
+    .attr("r", 10)
+    .attr("cx", oneBarBox.x + 15)
+    .attr("cy", oneBarBox.y - 12)
+    .style("stroke", "#C51B7D")
+    .style("fill", "#C51B7D");
+  hint5Group
+    .append("text")
+    .attr("x", oneBarBox.x + 15)
+    .attr("y", oneBarBox.y - 6)
+    .attr("text-anchor", "middle")
+    .attr("fill", "white")
+    .text("5");
+  hint5Group
+    .append("rect")
+    .attr("width", oneBarBox.width)
+    .attr("height", oneBarBox.height)
+    .attr("x", oneBarBox.x)
+    .attr("y", oneBarBox.y)
+    .attr("fill", "none")
+    .attr("stroke", "#C51B7D")
+    .attr("stroke-width", 2);
+
+  hint5Group2
+    .append("circle")
+    .attr("r", 10)
+    .attr("cx", oneBarBox2.x + 15)
+    .attr("cy", oneBarBox2.y - 12)
+    .style("stroke", "#C51B7D")
+    .style("fill", "#C51B7D");
+  hint5Group2
+    .append("text")
+    .attr("x", oneBarBox2.x + 15)
+    .attr("y", oneBarBox2.y - 6)
+    .attr("text-anchor", "middle")
+    .attr("fill", "white")
+    .text("5");
+  hint5Group2
+    .append("rect")
+    .attr("width", oneBarBox2.width)
+    .attr("height", oneBarBox2.height)
+    .attr("x", oneBarBox2.x)
+    .attr("y", oneBarBox2.y)
+    .attr("fill", "none")
+    .attr("stroke", "#C51B7D")
+    .attr("stroke-width", 2);
+
+  return 4;
+};
 
 /** FOR LEGEND BOXES NECESSARY */
 const makeLegendBoxes = () => {
@@ -190,4 +256,11 @@ const makeLegendBoxes = () => {
   moveElementsToNewParent(["step-3", "step-4", "step-5"], "using");
 };
 
-export { createHintOne, makeLegendBoxes, createHintTwo, createHintThree, createHintFour };
+export {
+  createHintOne,
+  makeLegendBoxes,
+  createHintTwo,
+  createHintThree,
+  createHintFour,
+  createHintFive
+};
