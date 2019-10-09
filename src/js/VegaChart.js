@@ -34,14 +34,14 @@ export default class VegaChart extends Component {
   }
 
   static getScreenAppropriateSize(windowWidth) {
-    if (windowWidth <= 400) return { width: 175, height: 60 };
+    if (windowWidth <= 400) return { width: 375, height: 80 };
     if (windowWidth > 400 && windowWidth <= 768)
-      return { width: 200, height: 80 };
+      return { width: 400, height: 100 };
     if (windowWidth > 768 && windowWidth <= 992)
-      return { width: 300, height: 120 };
+      return { width: 500, height: 140 };
     if (windowWidth > 992 && windowWidth <= 1200)
-      return { width: 400, height: 150 };
-    if (windowWidth > 1200) return { width: 700, height: 150 };
+      return { width: 600, height: 170 };
+    if (windowWidth > 1200) return { width: 900, height: 170 };
   }
 
   updateDimensions() {
@@ -54,8 +54,6 @@ export default class VegaChart extends Component {
     return (
       <Fragment>
         <VegaLite
-          width={this.state.width}
-          height={this.state.height}
           spec={this.state.cfg.spec}
           data={this.state.cfg.data}
           tooltip={new Handler().call}

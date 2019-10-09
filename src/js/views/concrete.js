@@ -79,7 +79,8 @@ export class ConcreteDataProvider {
             title: 'Average temperature in °C'
           }
         },
-        title: 'Average temperature in Oslo, Norway in 2018'
+        title: 'Average temperature in Oslo, Norway in 2018',
+        width: 400
       },
       data: {
         values: sourceData1
@@ -106,7 +107,8 @@ export class ConcreteDataProvider {
             title: 'Average temperature in °C'
           }
         },
-        title: 'Average temperature in Tallinn, Estonia in 2018'
+        title: 'Average temperature in Tallinn, Estonia in 2018',
+        width: 400
       },
       data: {
         values: sourceData2
@@ -133,7 +135,8 @@ export class ConcreteDataProvider {
             title: 'Average temperature in °C'
           }
         },
-        title: 'Average temperature in Munich, Germany in 2018'
+        title: 'Average temperature in Munich, Germany in 2018',
+        width: 400
       },
       data: {
         values: sourceData3

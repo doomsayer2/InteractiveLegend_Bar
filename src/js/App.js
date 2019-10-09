@@ -124,20 +124,14 @@ class App extends Component {
             <div id="vizMain">
               <Row type="flex" justify="space-between">
                 <Col span={16}>
-                  <Row>
-                    <Col span={24}>
-                      <VegaChart mode={mode} view={view} chartID={1} />
-                    </Col>
+                  <Row type="flex" justify="center">
+                    <VegaChart mode={mode} view={view} chartID={1} />
                   </Row>
-                  <Row>
-                    <Col span={24}>
-                      <VegaChart mode={mode} view={view} chartID={2} />
-                    </Col>
+                  <Row type="flex" justify="center">
+                    <VegaChart mode={mode} view={view} chartID={2} />
                   </Row>
-                  <Row>
-                    <Col span={24}>
-                      <VegaChart mode={mode} view={view} chartID={3} />
-                    </Col>
+                  <Row type="flex" justify="center">
+                    <VegaChart mode={mode} view={view} chartID={3} />
                   </Row>
                 </Col>
                 <Col span={8}>
