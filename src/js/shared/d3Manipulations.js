@@ -12,10 +12,7 @@ const createHintOne = () => {
   const hint1Group = d3
     .select(".vegaViz1 > svg")
     .select(".mark-rect")
-    .append("g")
-    .on("click", function(d) {
-      d3.select(this).attr("visibility", "hidden");
-    });
+    .append("g");
 
   hint1Group
     .append("circle")
@@ -55,10 +52,7 @@ const createHintTwo = () => {
   const hint2Group = d3
     .select(".vegaViz1 > svg")
     .select(".mark-rect")
-    .append("g")
-    .on("click", function(d) {
-      d3.select(this).attr("visibility", "hidden");
-    });
+    .append("g");
 
   hint2Group
     .append("circle")
@@ -105,6 +99,42 @@ const createHintTwo = () => {
   return 2;
 };
 
+const createHintThree = () => {
+  const xAxisText = d3.select(".vegaViz1 > svg").select(".role-axis-title");
+  const text = xAxisText.node().getBBox();
+  const xAxis = d3.select(".vegaViz1 > svg").select(".role-axis-domain");
+
+  const hint3Group = d3
+    .select(".vegaViz1 > svg")
+    .select(".role-axis-title")
+    .append("g");
+
+  hint3Group
+    .append("circle")
+    .attr("r", 10)
+    .attr("cx", text.x + 48)
+    .attr("cy", text.y + 5)
+    .style("stroke", "#C51B7D")
+    .style("fill", "#C51B7D");
+  hint3Group
+    .append("text")
+    .attr("x", text.x + 48)
+    .attr("y", text.y + 10)
+    .attr("text-anchor", "middle")
+    .attr("fill", "white")
+    .text("3");
+
+  d3.select(xAxisText.node())
+    .select("text")
+    .style("fill", "#C51B7D");
+  d3.select(xAxis.node())
+    .select("line")
+    .style("stroke", "#C51B7D")
+    .style("stroke-width", 2);
+
+  return 3;
+};
+
 /** FOR LEGEND BOXES NECESSARY */
 const makeLegendBoxes = () => {
   d3.select(".stepsContainer")
@@ -122,4 +152,4 @@ const makeLegendBoxes = () => {
   moveElementsToNewParent(["step-3", "step-4", "step-5"], "using");
 };
 
-export { createHintOne, makeLegendBoxes, createHintTwo };
+export { createHintOne, makeLegendBoxes, createHintTwo, createHintThree };

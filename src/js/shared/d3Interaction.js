@@ -1,4 +1,4 @@
-import { createHintOne, createHintTwo } from "./d3Manipulations";
+import { createHintOne, createHintTwo, createHintThree } from "./d3Manipulations";
 
 const manageHints = mode => {
   switch (mode) {
@@ -7,6 +7,9 @@ const manageHints = mode => {
       break;
     case 1:
       createHintTwo();
+      break;
+    case 2:
+      createHintThree();
       break;
     default:
       console.log("Nothing happens");
