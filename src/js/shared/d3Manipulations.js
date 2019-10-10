@@ -41,7 +41,7 @@ const createHintOne = () => {
 
 const createHintTwo = () => {
   const paths = d3.select('.vegaViz1 > svg').selectAll('path');
-  const oneBar = d3.select(paths.nodes()[9]);
+  const oneBar = d3.select(paths.nodes()[10]);
   const oneBarBox = oneBar.node().getBBox();
 
   const hint2Group = d3
