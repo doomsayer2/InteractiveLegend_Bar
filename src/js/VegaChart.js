@@ -7,47 +7,9 @@ export default class VegaChart extends Component {
   constructor(props) {
     super(props);
 
-    let initialSize = VegaChart.getScreenAppropriateSize(window.innerWidth);
-    let fallbackSize = { width: 500, height: 500 };
-
     this.state = {
-      width:
-        initialSize && initialSize.width
-          ? initialSize.width
-          : fallbackSize.width,
-      height:
-        initialSize && initialSize.height
-          ? initialSize.height
-          : fallbackSize.height,
       cfg: getData(props.chartID)
     };
-
-    this.updateDimensions = this.updateDimensions.bind(this);
-  }
-
-  componentDidMount() {
-    window.addEventListener('resize', this.updateDimensions);
-  }
-
-  componentWillUnmount() {
-    window.removeEventListener('resize', this.updateDimensions);
-  }
-
-  static getScreenAppropriateSize(windowWidth) {
-    if (windowWidth <= 400) return { width: 375, height: 80 };
-    if (windowWidth > 400 && windowWidth <= 768)
-      return { width: 400, height: 100 };
-    if (windowWidth > 768 && windowWidth <= 992)
-      return { width: 500, height: 140 };
-    if (windowWidth > 992 && windowWidth <= 1200)
-      return { width: 600, height: 170 };
-    if (windowWidth > 1200) return { width: 900, height: 170 };
-  }
-
-  updateDimensions() {
-    let size = VegaChart.getScreenAppropriateSize(window.innerWidth);
-    if (size && size.width && size.height)
-      this.setState({ width: size.width, height: size.height });
   }
 
   render() {
