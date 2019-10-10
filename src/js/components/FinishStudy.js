@@ -36,7 +36,7 @@ const FinsihStudy = ({ mode }) => {
           </p>
         </Col>
       </Row>
-      <Row type="flex" justify="start">
+      <Row type="flex" justify="start" style={{ marginBottom: 40 + 'px' }}>
         <Col span={4} push={20}>
           <Button disabled={!enabled} type="primary" shape="round" block onClick={onFinishTest}>
             Done
