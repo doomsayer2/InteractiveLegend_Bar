@@ -5,7 +5,7 @@ const sourceData3 = require('./data/tempMunich.json'); // Munich Chart data
 const TEXTS = {
   ONE: 'Each bar represents a data item.',
   TWO:
-    'The height of each bar shows the <span class="hT">average temperature in Oslo for a certain month</span> (y-axis).',
+    'The height of each bar shows e.g., the <span class="hT">average temperature in Oslo for a certain month</span> (y-axis).',
   THREE:
     'The horizontal position of each bar represents the <span class="hT">month</span> (x-axis).',
   FOUR:
