@@ -43,6 +43,14 @@ const createHintTwo = () => {
   const paths = d3.select('.vegaViz1 > svg').selectAll('path');
   const oneBar = d3.select(paths.nodes()[10]);
   const oneBarBox = oneBar.node().getBBox();
+  const yAxis = d3
+    .select('.vegaViz1 > svg')
+    .selectAll('.role-axis-domain')
+    .nodes()[1];
+  const yAxisText = d3
+    .select('.vegaViz1 > svg')
+    .selectAll('.role-axis-title')
+    .nodes()[1];
 
   const hint2Group = d3
     .select('.vegaViz1 > svg')
@@ -91,6 +99,14 @@ const createHintTwo = () => {
     .attr('y2', oneBarBox.y + oneBarBox.height)
     .attr('stroke', '#C51B7D')
     .attr('stroke-width', 2);
+
+  d3.select(yAxisText)
+    .select('text')
+    .style('fill', '#C51B7D');
+  d3.select(yAxis)
+    .select('line')
+    .style('stroke', '#C51B7D')
+    .style('stroke-width', 2);
 
   return 2;
 };
@@ -358,11 +374,27 @@ const removeAllHints = () => {
   // Custom Changes to the elements itself and not additions
   const xAxisText = d3.select('.vegaViz1 > svg').select('.role-axis-title');
   const xAxis = d3.select('.vegaViz1 > svg').select('.role-axis-domain');
+  const yAxis = d3
+    .select('.vegaViz1 > svg')
+    .selectAll('.role-axis-domain')
+    .nodes()[1];
+  const yAxisText = d3
+    .select('.vegaViz1 > svg')
+    .selectAll('.role-axis-title')
+    .nodes()[1];
 
   d3.select(xAxisText.node())
     .select('text')
     .style('fill', 'rgb(0, 0, 0)');
   d3.select(xAxis.node())
+    .select('line')
+    .style('stroke', 'rgb(136, 136, 136)')
+    .style('stroke-width', 1);
+
+  d3.select(yAxisText)
+    .select('text')
+    .style('fill', 'rgb(0, 0, 0)');
+  d3.select(yAxis)
     .select('line')
     .style('stroke', 'rgb(136, 136, 136)')
     .style('stroke-width', 1);
