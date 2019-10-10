@@ -32,4 +32,14 @@ const manageHints = mode => {
   }
 };
 
+const enableAllHints = () => {
+  createHintOne();
+  createHintTwo();
+  createHintThree();
+  createHintFour();
+  createHintFive();
+  createHintSix();
+}
+
 export default manageHints;
+export { enableAllHints };

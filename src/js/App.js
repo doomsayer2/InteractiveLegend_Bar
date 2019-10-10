@@ -102,7 +102,7 @@ class App extends Component {
             <Divider />
             <Row type="flex" justify="end">
               <Col span={24} className="pullRight">
-                <ModeSwitcher />
+                <ModeSwitcher mode={mode} />
                 <Button
                   id="previous"
                   type="primary"
