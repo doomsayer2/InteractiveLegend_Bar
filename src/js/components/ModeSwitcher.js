@@ -13,6 +13,7 @@ const ModeSwitcher = ({ mode }) => {
       // TODO OTHER IDEA NOW:
       // Render just all steps if this is checked with different classes otherwise render them normally
       d3.selectAll('.ant-steps-item-wait').classed('makeVisible', true);
+      removeAllHints();
       enableAllHints();
     } else {
       removeAllHints();
