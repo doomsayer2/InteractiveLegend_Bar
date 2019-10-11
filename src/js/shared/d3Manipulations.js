@@ -32,8 +32,7 @@ const createHintOne = () => {
     .attr('height', oneBarBox.height)
     .attr('x', oneBarBox.x)
     .attr('y', oneBarBox.y)
-    .attr('fill', 'none')
-    .attr('stroke', '#C51B7D')
+    .attr('fill', '#C51B7D')  
     .attr('stroke-width', 2);
 
   return 1;
@@ -179,8 +178,7 @@ const createHintFour = () => {
     .attr('height', oneBarBox.height)
     .attr('x', oneBarBox.x)
     .attr('y', oneBarBox.y)
-    .attr('fill', 'none')
-    .attr('stroke', '#C51B7D')
+    .attr('fill', '#C51B7D')  
     .attr('stroke-width', 2);
 
   return 4;
@@ -227,8 +225,7 @@ const createHintFive = () => {
     .attr('height', oneBarBox.height)
     .attr('x', oneBarBox.x)
     .attr('y', oneBarBox.y)
-    .attr('fill', 'none')
-    .attr('stroke', '#C51B7D')
+    .attr('fill', '#C51B7D')    
     .attr('stroke-width', 2);
 
   hint5Group2
@@ -251,8 +248,7 @@ const createHintFive = () => {
     .attr('height', oneBarBox2.height)
     .attr('x', oneBarBox2.x)
     .attr('y', oneBarBox2.y)
-    .attr('fill', 'none')
-    .attr('stroke', '#C51B7D')
+    .attr('fill', '#C51B7D')   
     .attr('stroke-width', 2);
 
   return 5;
@@ -309,8 +305,7 @@ const createHintSix = () => {
     .attr('height', oneBarBox.height)
     .attr('x', oneBarBox.x)
     .attr('y', oneBarBox.y)
-    .attr('fill', 'none')
-    .attr('stroke', '#C51B7D')
+    .attr('fill', '#C51B7D')   
     .attr('stroke-width', 2);
 
   hint5Group2
@@ -335,8 +330,7 @@ const createHintSix = () => {
     .attr('height', oneBarBox2.height)
     .attr('x', oneBarBox2.x)
     .attr('y', oneBarBox2.y)
-    .attr('fill', 'none')
-    .attr('stroke', '#C51B7D')
+    .attr('fill', '#C51B7D')   
     .attr('stroke-width', 2);
 
   hint5Group3
@@ -361,8 +355,7 @@ const createHintSix = () => {
     .attr('height', oneBarBox3.height)
     .attr('x', oneBarBox3.x)
     .attr('y', oneBarBox3.y)
-    .attr('fill', 'none')
-    .attr('stroke', '#C51B7D')
+    .attr('fill', '#C51B7D')   
     .attr('stroke-width', 2);
 
   return 6;
@@ -406,12 +399,12 @@ const makeLegendBoxes = () => {
     .append('fieldset')
     .attr('id', 'reading')
     .append('legend')
-    .text('Reading');
+    .text('Reading the Chart');
   d3.select('.stepsContainer')
     .append('fieldset')
     .attr('id', 'using')
     .append('legend')
-    .text('Using');
+    .text('Using the Chart');
 
   moveElementsToNewParent(['step-0', 'step-1', 'step-2'], 'reading');
   moveElementsToNewParent(['step-3', 'step-4', 'step-5'], 'using');

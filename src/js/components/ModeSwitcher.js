@@ -25,7 +25,7 @@ const ModeSwitcher = ({ mode }) => {
   return (
     <Fragment>
       <Tooltip title={tooltipText} arrowPointAtCenter>
-        <small style={{ marginRight: 10 + 'px' }}>All Hints</small>
+        <small style={{ marginRight: 10 + 'px' }}>Show/Hide All Hints</small>
         <Switch
           checkedChildren={'On'}
           unCheckedChildren={'Off'}
