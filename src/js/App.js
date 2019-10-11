@@ -117,13 +117,13 @@ class App extends Component {
             <div id="vizMain">
               <Row type="flex" justify="start">
                 <Col md={12} lg={12} xxl={8}>
-                  <Row type="flex" justify="start">
+                  <Row type="flex" justify="center">
                     <VegaChart mode={mode} view={view} chartID={1} />
                   </Row>
-                  <Row type="flex" justify="start">
+                  <Row type="flex" justify="center">
                     <VegaChart mode={mode} view={view} chartID={2} />
                   </Row>
-                  <Row type="flex" justify="start">
+                  <Row type="flex" justify="center">
                     <VegaChart mode={mode} view={view} chartID={3} />
                   </Row>
                 </Col>
