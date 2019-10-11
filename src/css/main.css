@@ -23,6 +23,18 @@
     margin: 2% 0 2% 0;
 }
 
+#vizMain {
+    margin-bottom: 2%;
+}
+
+#vizHeader {
+    margin-bottom: 2%;
+}
+
+.vizDesc {
+    line-height: 1.5;
+}
+
 #next {
     min-width: 100px;
     margin-left: 1%;
@@ -38,7 +50,7 @@
     position: absolute;
     top: 0%;
     right: 90px;
-    max-width: 100px;
+    max-width: 110px;
 }
 
 #fhLogo {
