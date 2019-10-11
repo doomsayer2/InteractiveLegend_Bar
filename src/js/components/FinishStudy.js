@@ -1,6 +1,6 @@
-import React, { Fragment, useEffect, useState } from 'react';
-import { Divider, Row, Col, Avatar, Button } from 'antd';
-import { MAX_HINTS } from '../shared/constants';
+import React, { Fragment, useEffect, useState } from "react";
+import { Divider, Row, Col, Avatar, Button } from "antd";
+import { MAX_HINTS } from "../shared/constants";
 
 const FinsihStudy = ({ mode }) => {
   const [enabled, setEnabled] = useState(false);
@@ -22,23 +22,27 @@ const FinsihStudy = ({ mode }) => {
       <Row type="flex" justify="start">
         <Col span={1}>
           <Avatar
-            style={{ backgroundColor: '#005096', verticalAlign: 'middle' }}
+            style={{ backgroundColor: "#005096", verticalAlign: "middle" }}
             size="large"
           >
             FHStp
           </Avatar>
         </Col>
         <Col span={16}>
-          <p style={{ fontStyle: 'italic' }}>
-            "If you are finished with exploring the visualization please click
-            the button below and go back to your survey if you are not
-            redirected automatically. <strong>Thank You!</strong>"
+          <p style={{ fontStyle: "italic" }}>
+            "If you feel well-informed please switch back to the window with the survey to continue the study. <strong>Thank You!</strong>"
           </p>
         </Col>
       </Row>
-      <Row type="flex" justify="start" style={{ marginBottom: 40 + 'px' }}>
+      <Row type="flex" justify="start" style={{ marginBottom: 40 + "px" }}>
         <Col span={4} push={20}>
-          <Button disabled={!enabled} type="primary" shape="round" block onClick={onFinishTest}>
+          <Button
+            disabled={!enabled}
+            type="primary"
+            shape="round"
+            block
+            onClick={onFinishTest}
+          >
             Done
           </Button>
         </Col>
