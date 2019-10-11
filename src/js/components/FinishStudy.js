@@ -30,7 +30,7 @@ const FinsihStudy = ({ mode }) => {
         </Col>
         <Col span={16}>
           <p style={{ fontStyle: "italic" }}>
-            "If you feel well-informed please switch back to the window with the survey to continue the study. <strong>Thank You!</strong>"
+            "If you had a good understanding of the bar chart, please return to the survey window and close this window. <strong>Thank You!</strong>"
           </p>
         </Col>
       </Row>
