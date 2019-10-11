@@ -13,7 +13,7 @@ const TEXTS = {
   FIVE:
     'The average temperature in <span class="hT">August</span> is higher in <span class="hT">Tallinn</span> than in <span class="hT">Oslo</span>.',
   SIX:
-    'In 2018, the average temperature in February was below 0°C in each of the three cities <span class="hT">Oslo, Munich, and Tallinn</span>.'
+    'In 2018, the average temperature in <span class="hT">February</span> was below 0°C in each of the three cities <span class="hT">Oslo, Munich, and Tallinn</span>.'
 };
 
 const TEXTGROUPS = {

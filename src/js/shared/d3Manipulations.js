@@ -260,15 +260,15 @@ const createHintFive = () => {
 
 const createHintSix = () => {
   const paths = d3.select('.vegaViz1 > svg').selectAll('path');
-  const oneBar = d3.select(paths.nodes()[2]);
+  const oneBar = d3.select(paths.nodes()[3]);
   const oneBarBox = oneBar.node().getBBox();
 
   const paths2 = d3.select('.vegaViz2 > svg').selectAll('path');
-  const oneBar2 = d3.select(paths2.nodes()[2]);
+  const oneBar2 = d3.select(paths2.nodes()[3]);
   const oneBarBox2 = oneBar2.node().getBBox();
 
   const paths3 = d3.select('.vegaViz3 > svg').selectAll('path');
-  const oneBar3 = d3.select(paths3.nodes()[2]);
+  const oneBar3 = d3.select(paths3.nodes()[3]);
   const oneBarBox3 = oneBar3.node().getBBox();
 
   const hint5Group = d3
