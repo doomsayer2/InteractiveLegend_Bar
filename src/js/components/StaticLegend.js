@@ -13,7 +13,7 @@ const hintsText = getAllHints().text;
 const StaticLegend = () => {
   useEffect(() => {
     makeStaticLegendBoxes('');
-  });
+  }, []);
 
   return (
     <Fragment>

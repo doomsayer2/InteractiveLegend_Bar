@@ -11,12 +11,14 @@ const ModeSwitcher = ({ mode, changeShowAllHints }) => {
       // TODO OTHER IDEA NOW:
       // Render just all steps if this is checked with different classes otherwise render them normally
       removeAllHints();
+      changeShowAllHints(true);
       d3.select('#dynamicLegend').classed('hiddenClass', true);
       d3.select('#staticLegend').classed('hiddenClass', false);
-        enableAllHints();
+      enableAllHints();
       
     } else {
       removeAllHints();
+      changeShowAllHints(false);
       d3.select('#dynamicLegend').classed('hiddenClass', false);
       d3.select('#staticLegend').classed('hiddenClass', true);
       manageHints(mode);
