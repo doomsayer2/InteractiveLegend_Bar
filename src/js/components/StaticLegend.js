@@ -1,6 +1,6 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, Fragment } from 'react';
 import StepContent from './StepContent';
-import { makeLegendBoxes } from '../shared/d3Manipulations';
+import { makeStaticLegendBoxes } from '../shared/d3Interaction';
 import { getAllHints } from '../shared/DataProvider';
 import '../../css/legend.css';
 
@@ -12,19 +12,20 @@ const hintsText = getAllHints().text;
 
 const StaticLegend = () => {
   useEffect(() => {
-    makeLegendBoxes();
+    makeStaticLegendBoxes('');
   });
 
   return (
-    <div>
+    <Fragment>
       <Row type="flex" justify="start" style={{ marginTop: 20 + 'px' }}>
         <Steps
           direction="vertical"
-          className={'stepsContainer'}
+          className='stepsContainer'
+          id="staticSteps"
         >
           {hintsText.map((item, idx) => (
             <Step
-              id={`step-${idx}`}
+              id={`stepS-${idx}`}
               key={idx}
               title={<StepContent content={item[`h${idx + 1}`]} />}
               status={'process'}
@@ -32,7 +33,7 @@ const StaticLegend = () => {
           ))}
         </Steps>
       </Row>
-    </div>
+    </Fragment>
   );
 };
 

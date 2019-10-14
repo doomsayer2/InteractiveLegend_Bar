@@ -130,15 +130,16 @@ class App extends Component {
                   </Row>
                 </Col>
                 <Col md={12} lg={12} xxl={8}>
-                  {this.state.showAllHints ? (
-                    <StaticLegend />
-                  ) : (
+                  <div id="dynamicLegend">
                     <Legend
                       mode={mode}
                       view={view}
                       cb={i => this.changeVis(i)}
                     />
-                  )}
+                  </div>
+                  <div id="staticLegend" className="hiddenClass">
+                    <StaticLegend />
+                  </div>
                 </Col>
               </Row>
             </div>
