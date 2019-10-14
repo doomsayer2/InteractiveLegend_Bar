@@ -6,15 +6,16 @@ import { removeAllHints } from '../shared/d3Manipulations';
 
 const ModeSwitcher = ({ mode, changeShowAllHints }) => {
   const toggle = (checked, event, mode, changeShowAllHints) => {
-    console.log('function: ', changeShowAllHints);
     if (checked) {
       // TODO OTHER IDEA NOW:
       // Render just all steps if this is checked with different classes otherwise render them normally
-      removeAllHints();
       changeShowAllHints(true);
       d3.select('#dynamicLegend').classed('hiddenClass', true);
       d3.select('#staticLegend').classed('hiddenClass', false);
-      enableAllHints();
+      setTimeout(() => {
+        removeAllHints();
+        enableAllHints();
+      }, 1);
       
     } else {
       removeAllHints();
@@ -26,7 +27,7 @@ const ModeSwitcher = ({ mode, changeShowAllHints }) => {
   };
 
   return (
-    <Fragment>
+    <div style={{ marginTop: 2.5 + 'px', marginRight: 8 + 'px' }}>
         <small style={{ marginRight: 10 + 'px' }}>Show/Hide All Hints</small>
         <Switch
           checkedChildren={'On'}
@@ -36,7 +37,7 @@ const ModeSwitcher = ({ mode, changeShowAllHints }) => {
             toggle(checked, e, mode, changeShowAllHints);
           }}
         ></Switch>
-    </Fragment>
+    </div>
   );
 };
 
