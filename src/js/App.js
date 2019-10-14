@@ -4,7 +4,7 @@ import VegaChart from './VegaChart';
 import Legend from './Legend';
 import Greeting from './components/Greeting';
 import ModeSwitcher from './components/ModeSwitcher';
-// import FinishStudy from './components/FinishStudy';
+import FinishStudy from './components/FinishStudy';
 import Header from './components/Header';
 import manageHints from './shared/d3Interaction';
 import { LoadingIndicator } from './shared/util';
@@ -132,9 +132,9 @@ class App extends Component {
                 </Col>
               </Row>
             </div>
-            {/* <div id="vizControls" style={{ marginTop: 40 + 'px' }}>
+            <div id="vizControls" style={{ marginTop: 40 + 'px' }}>
               <FinishStudy mode={mode} />
-            </div> */}
+            </div>
           </Fragment>
         )}
       </div>
