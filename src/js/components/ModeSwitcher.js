@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import { Switch } from 'antd';
 import * as d3 from 'd3';
 import manageHints, { enableAllHints } from '../shared/d3Interaction';
