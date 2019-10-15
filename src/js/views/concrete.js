@@ -7,13 +7,13 @@ const TEXTS = {
   TWO:
     'The height of each bar shows e.g., the <span class="hT">average temperature (y-axis)</span> in <span class="hT">Oslo</span> for a certain month.',
   THREE:
-    'The horizontal position of each bar represents the <span class="hT">month</span> (x-axis).',
+    'The horizontal position of each bar represents the <span class="hT">month (x-axis)</span>.',
   FOUR:
-    'An average temperature of <span class="hT">-4 °C</span> was measured in <span class="hT">Oslo in February</span>.',
+    'An <span class="hT">average temperature</span> of <span class="hT">-4 °C</span> was measured in <span class="hT">Oslo in February</span>.',
   FIVE:
-    'The average temperature in <span class="hT">August</span> was higher in <span class="hT">Tallinn</span> than in <span class="hT">Oslo</span>.',
+    'The <span class="hT">average temperature</span> in <span class="hT">August</span> was higher in <span class="hT">Tallinn</span> than in <span class="hT">Oslo</span>.',
   SIX:
-    'In 2018, the average temperature in <span class="hT">February</span> was below 0°C in each of the three cities <span class="hT">Oslo, Munich, and Tallinn</span>.'
+    'In 2018, the <span class="hT">average temperature</span> in <span class="hT">February</span> was below 0°C in each of the three cities <span class="hT">Oslo</span>, <span class="hT">Munich</span>, and <span class="hT">Tallinn</span>.'
 };
 
 const TEXTGROUPS = {
