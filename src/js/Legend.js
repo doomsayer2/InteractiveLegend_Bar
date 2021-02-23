@@ -21,16 +21,6 @@ export default class Legend extends Component {
     makeLegendBoxes();
   }
 
-  componentDidUpdate(prevProps, prevState, snapshot) {
-    if (
-      !equal(this.props.mode, prevProps.mode)
-    ) {
-      this.setState({
-        data: getData(this.props.mode).data
-      });
-    }
-  }
-
   onChange = current => {
     console.log('onChange:', current);
   };
